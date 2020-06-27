@@ -4,10 +4,10 @@
 cmake_minimum_required (VERSION 3.8)
 project ("libtorchdemo")
 set(CMAKE_CXX_STANDARD 14)
-set(CMAKE_PREFIX_PATH D:/lib/libtorch)
+set(CMAKE_PREFIX_PATH D:/lib/libtorch_cpu_debug)
 find_package(Torch REQUIRED)
 # 将源代码添加到此项目的可执行文件。
-add_executable (libtorchdemo main.cpp header.h utils.cpp utils.h)
+add_executable (libtorchdemo main.cpp header.h utils.cpp utils.h demo.cpp demo.h)
 target_link_libraries(libtorchdemo "${TORCH_LIBRARIES}")
 if (MSVC)
     file(GLOB TORCH_DLLS "${TORCH_INSTALL_PREFIX}/lib/*.dll")

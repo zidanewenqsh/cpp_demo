@@ -3,4 +3,4 @@ project(cexedemo C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(cexedemo main.c)
+add_executable(cexedemo main.c utils.c header.h)

@@ -35,7 +35,8 @@ void tensor2mat3(const torch::Tensor &tensor_data, Mat &img);
 void print_tensor(const torch::Tensor &tensor_data, int type = 0);
 
 void tensor2mat(const torch::Tensor &tensor_data, Mat &img);
-
+void tensor_property(const torch::Tensor &tensor_data);
+void tensor_operator(torch::Tensor &t1, torch::Tensor &t2);
 template<typename T>
 void getTime(T (*fun)()) {
     clock_t start, end;

@@ -12,4 +12,15 @@
 using namespace std;
 //using namespace cv;
 
-void net(const torch::Tensor& x, torch::Tensor &y, torch::jit::script::Module module);
+void tensor_property(const torch::Tensor &tensor_data);
+void tensor_operator(torch::Tensor &t1, torch::Tensor &t2);
+template<typename T>
+void getTime(T (*fun)()) {
+    clock_t start, end;
+    double endtime;
+    start = clock();
+    fun();
+    end = clock();
+    endtime = (double) (end - start) / CLOCKS_PER_SEC;
+    cout << "endtime: " << endtime << endl;
+}

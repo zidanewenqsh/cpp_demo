@@ -2,18 +2,10 @@
 #include "utils.h"
 
 void fun() {
-    at::Tensor t = torch::arange(24, torch::kFloat).reshape({1, 2, 3, 4});
+    at::Tensor t1 = torch::arange(9, torch::kInt).reshape({3, 3});
+    at::Tensor t2 = torch::ones({3, 3}, torch::kInt)*2;
+    tensor_operator(t1, t2);
 
-//    cout << "t.dtype() " << t.dtype() << endl;
-//    cout << "t.device() " << t.device() << endl;
-//    cout << "t.numel() " << t.numel() << endl;
-//    cout << "t.ndimension() " << t.ndimension() << endl;
-//    cout << "t.dim() " << t.dim() << endl;
-//    cout << "t.sizes() " << t.sizes() << endl;
-//    cout << "t.size(0) " << t.size(0) << endl;
-//    cout << "t.numpy_T() " << t.numpy_T().sizes() << endl;
-    cout << "t.numpy_T() " <<   << endl;
-    cout<<"" << t << endl;
 }
 
 int main() {
