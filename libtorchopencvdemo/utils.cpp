@@ -1,6 +1,10 @@
+
 //
 // Created by wen on 2020/6/24.
 //
+#ifndef DLL_EXPORTS
+#define DLL_EXPORTS
+#endif
 
 #include "utils.h"
 
@@ -40,11 +44,13 @@ void load_module(torch::jit::script::Module &module, const string &path, torch::
     }
 }
 
+
 void forward(const torch::Tensor &x, torch::Tensor &y, torch::jit::script::Module module) {
     std::vector<torch::jit::IValue> inputs;
     inputs.emplace_back(x);
     y = module.forward(inputs).toTensor();
 }
+
 
 void load_image(Mat &img, const string &path, int width, int height, int type) {
     img = imread(path, type > 0 ? 1 : 0);
@@ -55,6 +61,7 @@ void load_image(Mat &img, const string &path, int width, int height, int type) {
     resize(img, img, Size(width, height));
 }
 
+
 void mat2tensor(const Mat &img, torch::Tensor &img_tensor, torch::Device device) {
     img_tensor = torch::from_blob(img.data, {1, img.rows, img.cols, img.channels()}, torch::kByte);
     img_tensor = img_tensor.toType(torch::kFloat);
@@ -63,6 +70,7 @@ void mat2tensor(const Mat &img, torch::Tensor &img_tensor, torch::Device device)
     img_tensor = img_tensor.sub_(0.5).div_(0.5);
     img_tensor = img_tensor.to(device);
 }
+
 
 void print_tensor(const torch::Tensor &tensor_data, int type) {
     Mat img;
@@ -142,7 +150,8 @@ void tensor_property(const torch::Tensor &tensor_data) {
     }
     cout << "tensor_data" << tensor_data << endl;
 }
-
+//Warning: Integer division of tensors using div or / is deprecated, and in a future release div will perform true divisio
+//n as in Python 3. Use true_divide or floor_divide (// in Python) instead.
 void tensor_operator(torch::Tensor &t1, torch::Tensor &t2) {
     cout << "t1" << endl << t1 << endl;
     cout << "t2" << endl << t2 << endl;

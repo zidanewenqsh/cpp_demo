@@ -1,11 +1,20 @@
+/*
+ * @Descripttion: 
+ * @version: 
+ * @Author: QsWen
+ * @Date: 2020-06-24 20:04:14
+ * @LastEditors: QsWen
+ * @LastEditTime: 2020-07-15 21:29:59
+ */ 
 //
 // Created by wen on 2020/6/24.
 //
 #pragma once
-#ifndef LIBTORCHOPENCVDEMO_HEADER_H
-#define LIBTORCHOPENCVDEMO_HEADER_H
 
-#endif //LIBTORCHOPENCVDEMO_HEADER_H
+
+#ifndef LIBTORCHOPENCVDEMO_MAIN_H
+#define LIBTORCHOPENCVDEMO_MAIN_H
+
 
 #include <iostream>
 #include <torch/torch.h>
@@ -19,4 +28,6 @@
 using namespace std;
 using namespace cv;
 
-// TODO: 在此处引用程序需要的其他标头。
+
+
+#endif //LIBTORCHOPENCVDEMO_MAIN_H

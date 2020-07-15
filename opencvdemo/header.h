@@ -10,7 +10,7 @@
 #include <opencv2/opencv.hpp>
 #include <ctime>
 #include <cstdlib>
-
+#define imgpath "D:\\CLionProjects\\cpp_demo\\opencvdemo\\source\\cat.jpg"
 //#include "opencv2/imgproc.hpp"
 //#include "opencv2/imgcodecs.hpp"
 //#include "opencv2/highgui.hpp"

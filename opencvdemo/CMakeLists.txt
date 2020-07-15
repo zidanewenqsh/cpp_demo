@@ -9,7 +9,7 @@ set(OpenCV_DIR D:/lib/opencv/build/x64/vc15/lib)
 
 find_package(OpenCV REQUIRED)
 # 将源代码添加到此项目的可执行文件。
-add_executable(opencvdemo main.cpp header.h header.h utils.cpp utils.h)
+add_executable(opencvdemo main.cpp header.h header.h utils.cpp utils.h demo.cpp demo.h)
 target_link_libraries(opencvdemo "${OpenCV_LIBS}")
 if (MSVC)
     file(GLOB OPENCV_DLLS "D:/lib/opencv/build/x64/vc15/bin/*.dll")

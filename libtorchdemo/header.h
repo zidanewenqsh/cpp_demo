@@ -14,12 +14,12 @@
 #include <cstdlib>
 #include <ctime>
 #include <vector>
-//#include <opencv2/opencv.hpp>
+#include <opencv2/opencv.hpp>
 
 //#include "opencv2/imgproc.hpp"
 //#include "opencv2/imgcodecs.hpp"
 //#include "opencv2/highgui.hpp"
 using namespace std;
-//using namespace cv;
+using namespace cv;
 
 // TODO: 在此处引用程序需要的其他标头。

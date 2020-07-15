@@ -11,9 +11,11 @@ void fun() {
 }
 
 int main() {
-	//    fun();
+	fun();
 
 	std::cout << "Hello, World!" << std::endl;
+	Mat img(3, 3, CV_32F, Scalar(0.0));
+	cout << format(img, Formatter::FMT_NUMPY) << endl;
 
 	return 0;
 }
